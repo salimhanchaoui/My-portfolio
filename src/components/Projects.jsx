@@ -6,11 +6,11 @@ import demoVideo4 from '../assets/vid4.mp4'
 import demoVideo5 from '../assets/vid5.mp4'
 import demoVideo6 from '../assets/vid6.mp4'
 import demoVideo7 from '../assets/vid7.mp4'
-import Proj2 from '../assets/Proj2.png';
-import Proj3 from '../assets/Proj3.png';
-import Proj4 from '../assets/Proj4.png';
-import Proj5 from '../assets/Proj5.png';
-import Proj6 from '../assets/Proj6.png';
+import Proj2 from '../assets/proj2.png';
+import Proj3 from '../assets/proj3.png';
+import Proj4 from '../assets/proj4.png';
+import Proj5 from '../assets/proj5.png';
+import Proj6 from '../assets/proj6.png';
 const projects = [
   {
     title: 'Lootify',
