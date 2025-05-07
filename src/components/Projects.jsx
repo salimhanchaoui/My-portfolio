@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Proj1_1 from '../assets/Proj1-1.png';
+import Proj1_1 from '../assets/proj1-1.png';
 import demoVideo1 from '../assets/vid1.mp4';
 import demoVideo2 from '../assets/vid2.mp4';
 import demoVideo4 from '../assets/vid4.mp4'
