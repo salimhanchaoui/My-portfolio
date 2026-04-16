@@ -5,8 +5,8 @@ const contacts = [
   {
     Icon: FaEnvelope,
     label: 'Email',
-    value: 's.hanchaoui@yahoo.fr',
-    href: 'mailto:s.hanchaoui@yahoo.fr',
+    value: 's.hanchaoui032@gmail.com',
+    href: 'mailto:s.hanchaoui032@gmail.com',
   },
   {
     Icon: FaPhoneAlt,
@@ -24,7 +24,7 @@ const contacts = [
     Icon: FaLinkedin,
     label: 'LinkedIn',
     value: 'linkedin.com/in/salim-hanchaoui',
-    href: 'https://www.linkedin.com/in/salim-hanchaoui-3082602aa/',
+    href: 'https://www.linkedin.com/in/salim-hanchaoui-3196683b3/',
   },
 ];
 
@@ -62,10 +62,10 @@ export default function Contact() {
             <span className="text-zinc-600">something great.</span>
           </h2>
           <a
-            href="mailto:s.hanchaoui@yahoo.fr"
+            href="mailto:s.hanchaoui032@gmail.com"
             className="text-base md:text-lg text-zinc-400 hover:text-white transition-colors duration-200 underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-500"
           >
-            s.hanchaoui@yahoo.fr
+            s.hanchaoui032@gmail.com
           </a>
         </motion.div>
 
