@@ -1,12 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #eab308;
+  --color-accent-light: #fde047;
+  --color-surface: #0a0a0f;
+  --color-surface-light: #12121a;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+}
+
 :root {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
   color: #e4e4e7;
-  background-color: #080808;
+  background-color: #07070a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,12 +23,26 @@
 }
 
 html {
+  scroll-behavior: auto; /* disable smooth for snap */
+}
+
+/* Scroll snap container */
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+}
+
+.snap-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 /* Refined scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,16 +50,70 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: rgba(234, 179, 8, 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: rgba(234, 179, 8, 0.5);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(129, 140, 248, 0.2);
+  background: rgba(234, 179, 8, 0.25);
   color: #f4f4f5;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #eab308 0%, #fde047 50%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 40px rgba(234, 179, 8, 0.15), 0 0 80px rgba(234, 179, 8, 0.05);
+}
+
+.glow-accent-strong {
+  box-shadow: 0 0 60px rgba(234, 179, 8, 0.25), 0 0 120px rgba(234, 179, 8, 0.08);
+}
+
+/* Animated gradient border */
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Page transition overlay */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
